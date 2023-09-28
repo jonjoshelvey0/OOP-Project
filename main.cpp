@@ -40,8 +40,8 @@ int main()
     //                /     \
     //             maths    geography
 
-    // the elf is the good one that regeneates health, all monsters are bad
-    // NPC class would have attributes like name, saveGame(), giveQuestion() etc.
+    // the elf is the good one that regenerates health, all monsters are bad
+    // NPC class would have attributes like name, giveQuestion(), actionOnceDefeated(), type etc.
     // 
 
     // should have a question bank class that we query, instead of copying-in the question bank for each new monster or elf
