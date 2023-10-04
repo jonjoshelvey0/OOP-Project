@@ -6,9 +6,11 @@
 #include "Random.h"
 #include "Player.h"
 #include "Monster.h"
-#include "GoodMonster.h"
-#include "BadMonster.h"
-#include "BadMathsMonster.h"
+#include "Elf.h"
+#include "GeographyGiant.h"
+#include "MathsMinotaur.h"
+#include "GrammarGoblin.h"
+#include "ScienceSphynx.h"
 
 using namespace std;
 
