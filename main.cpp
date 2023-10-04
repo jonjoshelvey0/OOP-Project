@@ -24,7 +24,7 @@ Monster* getMonster()
 
 int main()
 {
-    Player player;
+    //Player player;
     QuestionBank questionBank;
 
     while (false)

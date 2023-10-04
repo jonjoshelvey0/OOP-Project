@@ -14,30 +14,29 @@ class QuestionBank
 public:
     QuestionBank()
     {
-        cout << "test";
-        ifstream file;
-        file.open("MathsQuestions.txt");
+        ifstream myFile;
+        myFile.open("MathsQuestions.txt");
 
         string question;
-        cout << "test";
 
-        if (file.is_open())
-            cout << "file is open";
+        if (myFile.is_open()) // test
+            cout << "myFile is open\n";
         else
-            cout << "not open";
+            cout << "not open\n";
 
-        while (file)
+        while (getline(myFile, question))
         {
-            getline(file, question);
+            if (question == "")
+                continue;
+
             mathsQ.push_back(question);
         }
 
-        // for (auto& i : mathsQ)
-        //     cout << i;
+        for (auto& i : mathsQ) // iterates through mathsQ and prints each question - for testing
+            cout << i << "\n";
         
-        // cout << mathsQ[0];
 
-        file.close();
+        myFile.close();
     }
 
 };
