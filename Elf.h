@@ -1,13 +1,12 @@
-#ifndef BAD_MONSTER
-#define BAD_MONSTER
+#ifndef ELF
+#define ELF
 
 #include <iostream>
 
 using namespace std;
 
-class BadMonster
+class Elf
 {
-    int damage;
 
 public:
     void onceDefeated()
