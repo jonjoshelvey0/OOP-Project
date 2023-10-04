@@ -11,6 +11,7 @@
 #include "MathsMinotaur.h"
 #include "GrammarGoblin.h"
 #include "ScienceSphynx.h"
+#include "QuestionBank.h"
 
 using namespace std;
 
@@ -24,9 +25,7 @@ Monster* getMonster()
 int main()
 {
     Player player;
-
-    for (int a = 0; a < 10; ++a)
-        cout << Random::get(0, 1) << ' '; // returns a number between 0 to 1 (inclusive)
+    QuestionBank questionBank;
 
     while (false)
     {

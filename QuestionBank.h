@@ -32,10 +32,10 @@ public:
             mathsQ.push_back(question);
         }
 
-        for (auto& i : mathsQ)
-            cout << i;
+        // for (auto& i : mathsQ)
+        //     cout << i;
         
-        cout << mathsQ[0];
+        // cout << mathsQ[0];
 
         file.close();
     }
