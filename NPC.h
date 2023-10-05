@@ -5,12 +5,12 @@
 
 using namespace std;
 
-class NPC
+class Npc
 {
     string name;
 
 public:
-    NPC(string& n) : name{n} {}
+    Npc(string_view n) : name{n} {}
 
     void saveGame()
     {

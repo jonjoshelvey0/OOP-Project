@@ -32,11 +32,16 @@ public:
             mathsQ.push_back(question);
         }
 
-        for (auto& i : mathsQ) // iterates through mathsQ and prints each question - for testing
-            cout << i << "\n";
+        // for (auto& i : mathsQ) // iterates through mathsQ and prints each question - for testing
+        //     cout << i << "\n";
         
 
         myFile.close();
+    }
+
+    vector<string>& getMathsQ()
+    {
+        return mathsQ;
     }
 
 };
