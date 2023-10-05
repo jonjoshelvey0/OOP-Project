@@ -17,37 +17,76 @@ using namespace std;
 
 Monster* getMonster()
 {
-    // Random::get(1, 10);
+    Random::get(1, 10);
 
     return nullptr;
 }
 
+
 int main()
 {
-    //Player player;
     QuestionBank questionBank;
 
-    while (false)
+
+
+    while (true)
     {
-        Monster* monster = getMonster();
+        cout << "Welcome to Quest4Knowledge!\n\n";
+        cout << "[1] New Game\n[2] Saved Game\n[3] Rules\n[4] Show Leaderboards\n[5] Quit\n\n";
+
+        cout << "Enter selection: ";
+        string selection;
+        cin >> selection;
+
+        if (selection == "1")
+            cout << "newgame selected ...";
+        else if (selection == "5")
+            return 0;
+        else
+        {
+            cout << "\033[2J\033[1;1H"; // clears screen
+            continue;
+        }
 
 
+
+        //playGame();
+
+        // (1) New Game
+        // (2) Saved Game
+        // [3] Rules
+        // [4] Show Leaderboards
+        // [5] Quit
+
+        // switch (mainMenu())
+        // {
+        //     case 1: // newgame
+        //         Player player;
+        //         break;
+        //     case 2: // saved game
+        //         //Player player{a, b, c};
+        //         break;
+        // }
+
+        while (false)
+        {
+            Monster* monster = getMonster();
+
+            // monster.giveQuestion(player);
+
+
+            // if (player.getHealth() < 1)
+            //     break;
+            
+            // GrammarGoblin gob;
+
+            // gob.giveQuestion();
+
+            //saveGame();
+        }
+
+        // print score
     }
-
-
-    //            NPC                                               
-    //          /     \ 
-    //        elf    monster          
-    //                /     \
-    //             maths    geography
-
-    // the elf is the good one that regenerates health, all monsters are bad
-    // NPC class would have attributes like name, giveQuestion(), actionOnceDefeated(), type etc.
-    // 
-
-    // should have a question bank class that we query, instead of copying-in the question bank for each new monster or elf
-
-
 
     return 0;
 }

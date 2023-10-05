@@ -5,11 +5,23 @@
 
 using namespace std;
 
-class GrammarGoblin
+class GrammarGoblin : public Monster
 {
 
 public:
-   
+
+    GrammarGoblin()// : Monster{"Grammar"}
+    {
+
+    }
+
+
+    void verifyInput()
+    {
+
+    }
+
+
 
 };
 

@@ -5,17 +5,16 @@
 
 using namespace std;
 
-class Npc
+class NPC
 {
     string name;
-    vector<string> questionBank;
 
 public:
-    Npc(string& n) : name{n} {}
+    NPC(string& n) : name{n} {}
 
     void saveGame()
     {
-
+        
     }
 
     void recieveAttack()
