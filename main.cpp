@@ -15,7 +15,7 @@
 
 using namespace std;
 
-Npc* getNpc()
+Npc* getNPC()
 {
     if (Random::get(1, 10) == 1) // return an elf instead of a monster, 1 in 10 chance
         return new Elf{};
@@ -25,7 +25,7 @@ Npc* getNpc()
         case 1:
             return new ScienceSphynx{};
         case 2:
-            return new MathsMinotaur{};
+            //return new MathsMinotaur{};
         case 3:
             return new GeographyGiant{};
         case 4:
@@ -35,7 +35,22 @@ Npc* getNpc()
     return NULL;
 }
 
-void saveGame(Player player)
+string getName()
+{
+    return "";
+}
+
+void endGameAssesment(Player& player)
+{
+
+}
+
+void saveGame(Player& player)
+{
+
+}
+
+void showLeaderboard()
 {
 
 }
@@ -44,7 +59,11 @@ int main()
 {
     QuestionBank questionBank;
 
-    while (true)
+    //cout << questionBank.geographyQuestions[0][0] << " " << questionBank.geographyQuestions[0][1];
+    // cout << questionBank.scienceQuestions[0][0] << " " << questionBank.scienceQuestions[0][1] <<
+    //  " " << questionBank.scienceQuestions[0][2] << " " << questionBank.scienceQuestions[0][3];
+    
+    while (false)
     {
         cout << "\033[2J\033[1;1H";  // clears screen
         cout << "Welcome to Quest4Knowledge!\n\n";
@@ -69,19 +88,18 @@ int main()
 
         while (false)
         {
-            Npc* npc = getNpc();
+            // Npc* npc = getNPC();
 
-            // npc -> giveQuestion(player);
+            // //npc -> giveQuestion(player);
 
             // if (player.getHealth() < 1)
+            // {
+            //     endGameAssesment(player);
             //     break;
+            // }
             // else
             //     saveGame(player);
-
-
         }
-
-        // print score
     }
 
     return 0;
