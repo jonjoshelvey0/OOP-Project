@@ -14,8 +14,8 @@ class Player
 public:
     Player()
     {
-        // cout << "Enter your name: "; // have to implement input checking 
-        // cin >> name;
+         cout << "Enter your name: "; // have to implement input checking 
+         cin >> name;
     }
 
     int getScore()
