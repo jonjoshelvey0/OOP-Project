@@ -37,7 +37,6 @@ public:
         
         }
     }
-    
     void giveDivisonQuestion(Player& player) // random generator of a division quesiton
     {
         int dividend = Random::get(1, 100);
