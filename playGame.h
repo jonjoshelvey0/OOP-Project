@@ -64,7 +64,7 @@ void playGame(QuestionBank& questionBank)
         //npc -> giveQuestion(player);
         MathsMinotaur m;
 
-        m.giveDivisonQuestion();
+        m.giveQuestion(player);
 
         if (player.getHealth() < 1)
         {

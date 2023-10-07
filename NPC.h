@@ -11,7 +11,10 @@ class Npc
     string type;
 
 public:
-    Npc(string name, string type) {}
+    Npc(string type) : type{type}
+    {
+        // name = getName();
+    }
 
     virtual void giveQuestion()
     {
@@ -20,6 +23,16 @@ public:
     virtual void actionOnceDefeated()
     {
 
+    }
+
+    string_view getName()
+    {
+        return name;
+    }
+
+    string_view getType()
+    {
+        return type;
     }
 };
 

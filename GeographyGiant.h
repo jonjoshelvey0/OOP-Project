@@ -9,7 +9,8 @@ class GeographyGiant : public Monster
 {
 
 public:
-    
+
+    GeographyGiant() : Monster{"Geography Giant"} {}
 
 };
 

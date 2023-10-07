@@ -28,9 +28,9 @@ public:
         return health;
     }
 
-    void recieveDamage(int dmg)
+    void recieveDamage(int damage)
     {
-
+           health -= damage;
     }
 };
 

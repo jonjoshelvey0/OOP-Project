@@ -24,9 +24,9 @@ int main()
     // cout << questionBank.scienceQuestions[0][0] << " " << questionBank.scienceQuestions[0][1] <<
     //  " " << questionBank.scienceQuestions[0][2] << " " << questionBank.scienceQuestions[0][3];
 
-    MathsMinotaur m;
-    
-    m.giveDivisonQuestion();
+    // MathsMinotaur m;
+
+    // m.giveDivisonQuestion();
     
     while (false)
     {

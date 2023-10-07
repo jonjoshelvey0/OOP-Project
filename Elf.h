@@ -9,6 +9,8 @@ class Elf : public Npc
 {
 
 public:
+    Elf() : Npc{"Elf"} {}
+    
     void onceDefeated()
     {
 

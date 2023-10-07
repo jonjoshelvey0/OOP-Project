@@ -10,9 +10,9 @@ class MathsMinotaur : public Monster
 {
 
 public:
-    MathsMinotaur(string name, string type) : Monster{name, type} {}
+    MathsMinotaur() : Monster{"Maths Minotaur"} {}
 
-    void giveMultTable() // Random generator of a multiplication quesiton
+    void giveMultTable(Player& player) // Random generator of a multiplication quesiton
     {
 
         int x = Random::get(1, 12);
@@ -32,10 +32,13 @@ public:
         else
         {
             cout << " INCORRECT, the correct answer is !! " << correctAnswer << "." << endl;
+        
+        player.recieveDamage(damage);
+        
         }
     }
 
-    void giveDivisonQuestion() // random generator of a division quesiton
+    void giveDivisonQuestion(Player& player) // random generator of a division quesiton
     {
         int dividend = Random::get(1, 100);
         int divisor = Random::get(1, 10);
@@ -54,11 +57,12 @@ public:
         }
         else
         {
+            player.recieveDamage(damage);
             cout << "INCORRECT !! The correct answer is " << correctAnswer << "." << endl;
         }
     }
 
-    void additionQuestion()
+    void additionQuestion(Player& player)
     {
 
         int x = Random::get(1, 100);
@@ -77,11 +81,12 @@ public:
         }
         else
         {
+            player.recieveDamage(damage);
             cout << "INCORRECT !! The correct answer is " << answerC << "." << endl;
         }
     }
 
-    void subtractionQuestion()
+    void subtractionQuestion(Player& player)
     {
 
         int x = Random::get(1, 100);
@@ -100,27 +105,28 @@ public:
         }
         else
         {
+            player.recieveDamage(damage);
             cout << "INCORRECT !! The correct answer is " << answerC << "." << endl;
         }
     }
 
-    void getQuestion()
+    void giveQuestion(Player& player)
     {
         int randomFunction = Random::get(1, 4); // Generate a random number between 1 and 4
 
         switch (randomFunction)
         {
         case 1:
-            giveMultTable();
+            giveMultTable(player);
             break;
         case 2:
-            giveDivisonQuestion();
+            giveDivisonQuestion(player);
             break;
         case 3:
-            additionQuestion();
+            additionQuestion(player);
             break;
         case 4:
-            subtractionQuestion();
+            subtractionQuestion(player);
             break;
         default:
             cout << "Invalid selection" << endl;

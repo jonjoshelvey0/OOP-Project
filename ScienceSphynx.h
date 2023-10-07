@@ -9,6 +9,9 @@ class ScienceSphynx : public Monster
 {
 
 public:
+
+    ScienceSphynx() : Monster{"Science Sphynx"} {}
+
    
 
 };
