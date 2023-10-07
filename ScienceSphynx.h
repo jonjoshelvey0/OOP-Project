@@ -12,7 +12,10 @@ public:
 
     ScienceSphynx() : Monster{"Science Sphynx"} {}
 
-   
+   void giveQuestion(Player& player)
+   {
+    
+   }
 
 };
 

@@ -23,6 +23,11 @@ public:
         return score;
     }
 
+    void addScore(int s)
+    {
+        score += s;
+    }
+
     int getHealth()
     {
         return health;

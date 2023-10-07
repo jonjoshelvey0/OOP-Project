@@ -20,6 +20,8 @@ using namespace std;
 
 Npc* getNPC()
 {
+    return new MathsMinotaur{}; // TEST
+
     if (Random::get(1, 10) == 1) // return an elf instead of a monster, 1 in 10 chance
         return new Elf{};
     
@@ -61,10 +63,9 @@ void playGame(QuestionBank& questionBank)
     {
         Npc* npc = getNPC();
 
-        //npc -> giveQuestion(player);
-        MathsMinotaur m;
+        npc -> giveQuestion(player);
 
-        m.giveQuestion(player);
+        //cout << 
 
         if (player.getHealth() < 1)
         {

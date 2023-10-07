@@ -17,6 +17,11 @@ public:
 
     }
 
+    void giveQuestion(Player& player)
+    {
+        
+    }
+
 
 
 };
