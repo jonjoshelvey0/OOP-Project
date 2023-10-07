@@ -102,7 +102,7 @@ public:
         }
     }
 
-    void runRandomMathQuestion()
+    void getQuestion()
     {
         int randomFunction = Random::get(1, 4); // Generate a random number between 1 and 4
 
