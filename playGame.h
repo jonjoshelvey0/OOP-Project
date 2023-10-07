@@ -57,14 +57,18 @@ void playGame(QuestionBank& questionBank)
 {
     Player player;
 
-    while (false)
+    while (true)
     {
         Npc* npc = getNPC();
 
         //npc -> giveQuestion(player);
         MathsMinotaur m;
 
+<<<<<<< HEAD
         m.giveQuestion(player);
+=======
+        m.giveQuestion();
+>>>>>>> 7072844a8c5f4237f53623d0473db66f46cfdce3
 
         if (player.getHealth() < 1)
         {
