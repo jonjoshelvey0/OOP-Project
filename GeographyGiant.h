@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class GeographyGiant
+class GeographyGiant : public Monster
 {
 
 public:

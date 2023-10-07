@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Monster
+class Monster : public Npc
 {
     string type;
     int damage;

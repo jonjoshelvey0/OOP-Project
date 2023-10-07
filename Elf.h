@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Elf
+class Elf : public Npc
 {
 
 public:

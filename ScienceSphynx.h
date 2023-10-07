@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class ScienceSphynx
+class ScienceSphynx : public Monster
 {
 
 public:
