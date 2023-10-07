@@ -17,7 +17,7 @@ using namespace std;
 
 Npc* getNpc()
 {
-    if (Random::get(1, 10) == 1) // return an elf instead of a monster
+    if (Random::get(1, 10) == 1) // return an elf instead of a monster, 1 in 10 chance
         return new Elf{};
     
     switch (Random::get(1, 4))
@@ -31,11 +31,13 @@ Npc* getNpc()
         case 4:
             return new GrammarGoblin{};
     }
+
+    return NULL;
 }
 
 void saveGame(Player player)
 {
-    
+
 }
 
 int main()
