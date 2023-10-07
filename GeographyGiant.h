@@ -11,11 +11,10 @@ class GeographyGiant : public Monster
 public:
     GeographyGiant() : Monster{"Geography Giant"} {}
 
-    void giveQuestion(Player& player)
+    bool giveQuestion()
     {
         
     }
 
 };
-
 #endif

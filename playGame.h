@@ -22,10 +22,6 @@ Npc* getNPC()
 {
     return new MathsMinotaur{};
 
-
-
-    //return new MathsMinotaur{}; // TEST
-
     // if (Random::get(1, 10) == 1) // return an elf instead of a monster, 1 in 10 chance
     //     return new Elf{};
     
@@ -72,9 +68,9 @@ void playGame()
         cout << "Health: " <<player.getHealth() << "\n" << "Score: " << player.getScore() << "\n\n";
         cout << "You have encountered " << npc -> getName() << " the " << npc -> getType() << "!\n\n";
 
-        if (npc -> giveQuestion()) // answered correct
+        if (npc -> giveQuestion())                  // answered correct
             npc -> actionOnceDefeated(player);
-        else // incorrect
+        else                                        // incorrect
             npc -> actionWhenIncorrect(player);
         
         cout << "\n(Press Enter to Continue) ";

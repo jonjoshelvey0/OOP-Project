@@ -12,12 +12,7 @@ public:
 
     GrammarGoblin() : Monster{"Grammar Goblin"} {}
 
-    void verifyInput()
-    {
-
-    }
-
-    void giveQuestion(Player& player)
+    bool giveQuestion()
     {
         
     }
