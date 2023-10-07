@@ -17,9 +17,17 @@ using namespace std;
 
 Npc* getNpc()
 {
-    Random::get(1, 10);
+    
+    int x = Random::get(1, 10);
+
+    
 
     return nullptr;
+}
+
+void saveGame(Player player)
+{
+
 }
 
 int main()
@@ -38,8 +46,12 @@ int main()
 
         if (selection == "1")
         {
-            cout << "newgame selected ...\n"; //<< endl;
+            cout << "newgame selected ...\n";
             std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+        else if ()
+        {
+
         }
         else if (selection == "5")
             return 0;
@@ -49,30 +61,18 @@ int main()
             continue;
         }
 
-        // switch (mainMenu())
-        // {
-        //     case 1: // newgame
-        //         Player player;
-        //         break;
-        //     case 2: // saved game
-        //         //Player player{a, b, c};
-        //         break;
-        // }
-
         while (false)
         {
             Npc* npc = getNpc();
 
-            // monster.giveQuestion(player);
+            npc -> giveQuestion(player);
 
-            // if (player.getHealth() < 1)
-            //     break;
-            
-            // GrammarGoblin gob;
+            if (player.getHealth() < 1)
+                break;
+            else
+                saveGame(player);
 
-            // gob.giveQuestion();
 
-            //saveGame();
         }
 
         // print score
