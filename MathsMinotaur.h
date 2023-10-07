@@ -2,28 +2,21 @@
 #define MATHS_MINOTAUR
 
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
-
+#include "Random.h"
 
 using namespace std;
 
-class MathsMinotaur
+class MathsMinotaur: public Monster
 {
 
 public:
 
-int getRandomNumber(int min, int max) {
-    return rand() % (max - min + 1) + min;
-}
 
 void giveMultTable()
 {
-    srand(static_cast<unsigned int>(time(nullptr)));
-
-    
-    int x = getRandomNumber(1, 12);
-    int y = getRandomNumber(1, 12);
+   
+    int x = Random::get(1, 12);
+    int y = Random::get(1, 12);
 
     
     int correctAnswer = x * y;
@@ -43,9 +36,39 @@ void giveMultTable()
     }
 }
 
+void giveDivisonQuestion()
+{
+    int dividend = Random::get(1, 100);
+    int divisor =   Random::get(1, 10); 
+  
+    dividend = dividend - (dividend % divisor);
+    
+    int correctAnswer = dividend / divisor;
+    cout << "What is " << dividend << " divided by " << divisor << "? ";
+
+    int userAnswer;
+    cin >> userAnswer;
+
+    if (userAnswer == correctAnswer) {
+        cout << "CORRECT !! " << endl;
+    } else {
+        cout << "INCORRECT !! The correct answer is " << correctAnswer << "." << endl;
+    }
+}
+
+
+
+
 
 };
    
+
+
+
+
+
+
+
 
 
 #endif
