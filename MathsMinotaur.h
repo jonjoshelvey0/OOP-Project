@@ -34,7 +34,7 @@ public:
             cout << " INCORRECT, the correct answer is !! " << correctAnswer << "." << endl;
         }
     }
-
+    
     void giveDivisonQuestion() // random generator of a division quesiton
     {
         int dividend = Random::get(1, 100);
