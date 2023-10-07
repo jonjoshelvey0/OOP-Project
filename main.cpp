@@ -15,7 +15,7 @@
 
 using namespace std;
 
-void playGame();
+// void playGame();
 
 int main()
 {
@@ -43,7 +43,7 @@ int main()
         {
             cout << "newgame selected ...\n";
             std::this_thread::sleep_for(std::chrono::seconds(1));
-            playGame();
+            //playGame();
         }
         else if (selection == "2")
         {

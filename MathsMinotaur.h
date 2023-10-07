@@ -56,7 +56,7 @@ public:
         }
     }
 
-    void additionQuesotion()
+    void additionQuestion()
     {
 
         int x = Random::get(1, 100);
@@ -79,7 +79,7 @@ public:
         }
     }
 
-    void subtractionQuesotion()
+    void subtractionQuestion()
     {
 
         int x = Random::get(1, 100);
@@ -101,7 +101,30 @@ public:
             cout << "INCORRECT !! The correct answer is " << answerC << "." << endl;
         }
     }
+
+    void runRandomMathQuestion()
+    {
+        int randomFunction = Random::get(1, 4); // Generate a random number between 1 and 4
+
+        switch (randomFunction)
+        {
+        case 1:
+            giveMultTable();
+            break;
+        case 2:
+            giveDivisonQuestion();
+            break;
+        case 3:
+            additionQuestion();
+            break;
+        case 4:
+            subtractionQuestion();
+            break;
+        default:
+            cout << "Invalid selection" << endl;
+            break;
+        }
+    }
 };
 
 #endif
-
