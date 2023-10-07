@@ -23,9 +23,6 @@ public:
             return additionQuestion();
         case 4:
             return subtractionQuestion();
-        default:
-            cout << "Invalid selection\n";
-            break;
         }
     }
 
