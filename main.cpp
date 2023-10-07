@@ -12,11 +12,15 @@
 #include "GrammarGoblin.h"
 #include "ScienceSphynx.h"
 #include "QuestionBank.h"
+#include "playGame.h"
 
 using namespace std;
 
+<<<<<<< HEAD
 // void playGame();
 
+=======
+>>>>>>> 304ffd24d28ba01254388d0dd1bb1680058fcc3e
 int main()
 {
     QuestionBank questionBank;
@@ -43,7 +47,11 @@ int main()
         {
             cout << "newgame selected ...\n";
             std::this_thread::sleep_for(std::chrono::seconds(1));
+<<<<<<< HEAD
             //playGame();
+=======
+            playGame(questionBank);
+>>>>>>> 304ffd24d28ba01254388d0dd1bb1680058fcc3e
         }
         else if (selection == "2")
         {
@@ -63,10 +71,7 @@ int main()
         else if (selection == "5")
             return 0;
         else
-        {
             cout << "\033[2J\033[1;1H"; // clears screen
-            continue;
-        }
     }
 
     return 0;
