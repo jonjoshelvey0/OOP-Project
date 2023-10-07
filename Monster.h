@@ -2,6 +2,7 @@
 #define MONSTER
 
 #include <iostream>
+#include "Player.h"
 
 using namespace std;
 
@@ -15,12 +16,17 @@ public:
         damage = 30;
     }
 
-    void onceDefeated()
+    void actionOnceDefeated(Player& player)
     {
-        
+        player.addScore(15);
+        //cout << "Congratulations, you have defeated " << name << "\n";
     }
 
-
+    void actionWhenIncorrect(Player& player)
+    {
+        player.recieveDamage(damage);
+        cout << "\n" << name << " attacked you for -" << damage << ".\n";
+    }
 };
 
 #endif

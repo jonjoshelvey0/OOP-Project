@@ -3,6 +3,7 @@
 #include <thread>
 
 #include "Random.h"
+#include "QuestionBank.h"
 #include "Player.h"
 #include "NPC.h"
 #include "Monster.h"
@@ -11,22 +12,16 @@
 #include "MathsMinotaur.h"
 #include "GrammarGoblin.h"
 #include "ScienceSphynx.h"
-#include "QuestionBank.h"
 #include "playGame.h"
 
 using namespace std;
 
 int main()
 {
-    QuestionBank questionBank;
-
-    // cout << questionBank.geographyQuestions[0][0] << " " << questionBank.geographyQuestions[0][1];
-    // cout << questionBank.scienceQuestions[0][0] << " " << questionBank.scienceQuestions[0][1] <<
-    //  " " << questionBank.scienceQuestions[0][2] << " " << questionBank.scienceQuestions[0][3];
-
-    // MathsMinotaur m;
-
-    // m.giveDivisonQuestion();
+    QuestionBank::fillGeographyQuestions();
+    QuestionBank::fillScienceQuestions();
+    QuestionBank::fillGrammarQuestions();
+    QuestionBank::fillNames();
     
     while (true)
     {
@@ -42,7 +37,7 @@ int main()
         {
             cout << "newgame selected ...\n";
             std::this_thread::sleep_for(std::chrono::seconds(1));
-            playGame(questionBank);
+            playGame();
         }
         else if (selection == "2")
         {

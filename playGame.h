@@ -20,22 +20,26 @@ using namespace std;
 
 Npc* getNPC()
 {
-    return new MathsMinotaur{}; // TEST
+    return new MathsMinotaur{};
 
-    if (Random::get(1, 10) == 1) // return an elf instead of a monster, 1 in 10 chance
-        return new Elf{};
+
+
+    //return new MathsMinotaur{}; // TEST
+
+    // if (Random::get(1, 10) == 1) // return an elf instead of a monster, 1 in 10 chance
+    //     return new Elf{};
     
-    switch (Random::get(1, 4))
-    {
-        case 1:
-            return new ScienceSphynx{};
-        case 2:
-            return new MathsMinotaur{};
-        case 3:
-            return new GeographyGiant{};
-        case 4:
-            return new GrammarGoblin{};
-    }
+    // switch (Random::get(1, 4))
+    // {
+    //     case 1:
+    //         return new ScienceSphynx{};
+    //     case 2:
+    //         return new MathsMinotaur{};
+    //     case 3:
+    //         return new GeographyGiant{};
+    //     case 4:
+    //         return new GrammarGoblin{};
+    // }
 
     return NULL;
 }
@@ -55,21 +59,35 @@ void showLeaderboard()
 
 }
 
-void playGame(QuestionBank& questionBank)
+void playGame()
 {
+    cout << "\033[2J\033[1;1H";
+
     Player player;
 
     while (true)
     {
         Npc* npc = getNPC();
 
-        npc -> giveQuestion(player);
+        cout << "Health: " <<player.getHealth() << "\n" << "Score: " << player.getScore() << "\n\n";
+        cout << "You have encountered " << npc -> getName() << " the " << npc -> getType() << "!\n\n";
 
-        //cout << 
+        if (npc -> giveQuestion()) // answered correct
+            npc -> actionOnceDefeated(player);
+        else // incorrect
+            npc -> actionWhenIncorrect(player);
+        
+        cout << "\n(Press Enter to Continue) ";
+        cin.ignore();
+        cin.ignore();
 
+        cout << "\033[2J\033[1;1H";
+    
         if (player.getHealth() < 1)
         {
+            cout << "game over.\n\n";
             endGameAssesment(player);
+            std::this_thread::sleep_for(std::chrono::seconds(2));
             break;
         }
         else

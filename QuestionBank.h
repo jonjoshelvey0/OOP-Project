@@ -7,31 +7,14 @@
 
 using namespace std;
 
-// forward declarations
-class QuestionBank;
-void getScienceQuestions(QuestionBank* qb);
-void getGrammarQuestions(QuestionBank* qb);
-void getGeographyQuestions(QuestionBank* qb);
-void getNames(QuestionBank* qb);;
-
-class QuestionBank
+namespace QuestionBank
 {
-public:
     vector<vector<string>> geographyQuestions;
-    //vector<vector<string>> grammarQuestions;
     vector<vector<string>> scienceQuestions;
+    //static vector<vector<string>> grammarQuestions;   NOT DONE
     vector<string> names;
 
-    QuestionBank()
-    {
-        getGeographyQuestions(this);
-        //getGrammarQuestions(this);
-        getScienceQuestions(this);
-        getNames(this);
-    }
-};
-
-void getScienceQuestions(QuestionBank* qb)
+void fillScienceQuestions()
 {
     ifstream myFile;
     myFile.open("Science Questions.txt");
@@ -45,18 +28,18 @@ void getScienceQuestions(QuestionBank* qb)
 
     while (getline(myFile, question)) // reads first line, puts it into 'question' variable (will be the question)
     {
-        qb -> scienceQuestions.push_back(vector<string>()); // creates new vector for question and answer set
+        QuestionBank::scienceQuestions.push_back(vector<string>()); // creates new vector for question and answer set
 
-        qb -> scienceQuestions[qb -> scienceQuestions.size() - 1].push_back(question); // pushes back question
+        QuestionBank::scienceQuestions[QuestionBank::scienceQuestions.size() - 1].push_back(question); // pushes back question
 
         getline(myFile, question); // reads next line, will be the answer
-        qb -> scienceQuestions[qb -> scienceQuestions.size() - 1].push_back(question); // pushes back answer
+        QuestionBank::scienceQuestions[QuestionBank::scienceQuestions.size() - 1].push_back(question); // pushes back answer
 
         int x = 4;
         while (x--)
         {
             getline(myFile, question); // reads next line, will be the wrong answer
-            qb -> scienceQuestions[qb -> scienceQuestions.size() - 1].push_back(question); // pushes back wrong answer
+            QuestionBank::scienceQuestions[QuestionBank::scienceQuestions.size() - 1].push_back(question); // pushes back wrong answer
         }
 
         getline(myFile, question);
@@ -65,7 +48,7 @@ void getScienceQuestions(QuestionBank* qb)
     myFile.close();
 }
 
-void getGrammarQuestions(QuestionBank* qb)
+void fillGrammarQuestions()
 {
     ifstream myFile;
     myFile.open("Grammar Questions.txt");
@@ -79,13 +62,13 @@ void getGrammarQuestions(QuestionBank* qb)
 
     while (getline(myFile, question)) // reads first line, puts it into 'question' variable (will be the question)
     {
-        qb -> geographyQuestions.push_back(vector<string>()); // creates new vector for question and answer set
+        QuestionBank::geographyQuestions.push_back(vector<string>()); // creates new vector for question and answer set
 
-        qb -> geographyQuestions[qb -> geographyQuestions.size() - 1].push_back(question); // pushes back question
+        QuestionBank::geographyQuestions[QuestionBank::geographyQuestions.size() - 1].push_back(question); // pushes back question
 
         getline(myFile, question); // reads next line, will be the answer
 
-        qb -> geographyQuestions[qb -> geographyQuestions.size() - 1].push_back(question); // pushes back answer
+        QuestionBank::geographyQuestions[QuestionBank::geographyQuestions.size() - 1].push_back(question); // pushes back answer
 
         getline(myFile, question); // reads the empty new line (does nothing with it - for layour purposes in txt file)
     }
@@ -93,7 +76,7 @@ void getGrammarQuestions(QuestionBank* qb)
     myFile.close();
 }
 
-void getGeographyQuestions(QuestionBank* qb)
+void fillGeographyQuestions()
 {
     ifstream myFile;
     myFile.open("Geography Questions.txt");
@@ -107,13 +90,13 @@ void getGeographyQuestions(QuestionBank* qb)
 
     while (getline(myFile, question)) // reads first line, puts it into 'question' variable (will be the question)
     {
-        qb -> geographyQuestions.push_back(vector<string>()); // creates new vector for question and answer set
+        QuestionBank::geographyQuestions.push_back(vector<string>()); // creates new vector for question and answer set
 
-        qb -> geographyQuestions[qb -> geographyQuestions.size() - 1].push_back(question); // pushes back question
+        QuestionBank::geographyQuestions[QuestionBank::geographyQuestions.size() - 1].push_back(question); // pushes back question
 
         getline(myFile, question); // reads next line, will be the answer
 
-        qb -> geographyQuestions[qb -> geographyQuestions.size() - 1].push_back(question); // pushes back answer
+        QuestionBank::geographyQuestions[QuestionBank::geographyQuestions.size() - 1].push_back(question); // pushes back answer
 
         getline(myFile, question); // reads the empty new line (does nothing with it - for layour purposes in txt file)
     }
@@ -121,7 +104,7 @@ void getGeographyQuestions(QuestionBank* qb)
     myFile.close();
 }
 
-void getNames(QuestionBank* qb)
+void fillNames()
 {
     ifstream myFile;
     myFile.open("NPC Names.txt");
@@ -134,9 +117,10 @@ void getNames(QuestionBank* qb)
         cout << "not open\n";
 
     while (getline(myFile, question))
-        qb -> names.push_back(question);
+        QuestionBank::names.push_back(question);
     
     myFile.close();
+}
 }
 
 #endif
