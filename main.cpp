@@ -12,10 +12,9 @@
 #include "GrammarGoblin.h"
 #include "ScienceSphynx.h"
 #include "QuestionBank.h"
+#include "playGame.h"
 
 using namespace std;
-
-void playGame();
 
 int main()
 {
@@ -43,7 +42,7 @@ int main()
         {
             cout << "newgame selected ...\n";
             std::this_thread::sleep_for(std::chrono::seconds(1));
-            playGame();
+            playGame(questionBank);
         }
         else if (selection == "2")
         {
@@ -63,10 +62,7 @@ int main()
         else if (selection == "5")
             return 0;
         else
-        {
             cout << "\033[2J\033[1;1H"; // clears screen
-            continue;
-        }
     }
 
     return 0;

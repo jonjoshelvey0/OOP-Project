@@ -1,3 +1,6 @@
+#ifndef PLAYGAME
+#define PLAYGAME
+
 #include <iostream>
 #include <string>
 #include <thread>
@@ -16,11 +19,7 @@
 using namespace std;
 
 Npc* getNPC();
-
-void endGameAssesment(Player& player)
-{
-
-}
+void endGameAssesment(Player& player);
 
 void saveGame(Player& player)
 {
@@ -32,13 +31,13 @@ void showLeaderboard()
 
 }
 
-void playGame()
+void playGame(QuestionBank& questionBank)
 {
     Player player;
 
     while (false)
     {
-        //Npc* npc = getNPC();
+        Npc* npc = getNPC();
 
         //npc -> giveQuestion(player);
         MathsMinotaur m;
@@ -57,3 +56,4 @@ void playGame()
     }
 }
 
+#endif
