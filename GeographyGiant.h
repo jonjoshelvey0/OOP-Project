@@ -10,7 +10,7 @@ class GeographyGiant : public Monster
 
 public:
 
-    GeographyGiant(string name, string type) : Monster{name, type} {}
+    GeographyGiant() : Monster{"Geography Giant"} {}
 
 };
 

@@ -10,7 +10,7 @@ class Monster : public Npc
     int damage;
 
 public:
-    Monster(string name, string type) : Npc{name, type} 
+    Monster(string type) : Npc{type} 
     {
         
     }
@@ -19,8 +19,6 @@ public:
     {
 
     }
-
-    
 };
 
 #endif

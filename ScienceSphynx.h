@@ -10,7 +10,7 @@ class ScienceSphynx : public Monster
 
 public:
 
-    ScienceSphynx(string name, string type) : Monster{name, type} {}
+    ScienceSphynx() : Monster{"Science Sphynx"} {}
 
    
 

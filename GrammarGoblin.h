@@ -10,7 +10,7 @@ class GrammarGoblin : public Monster
 
 public:
 
-    GrammarGoblin(string name, string type) : Monster{name, type} {}
+    GrammarGoblin() : Monster{"Grammar Goblin"} {}
 
     void verifyInput()
     {
