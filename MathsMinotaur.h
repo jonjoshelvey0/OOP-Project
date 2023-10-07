@@ -9,6 +9,13 @@ class MathsMinotaur
 {
 
 public:
+
+void giveMultTable()
+{
+    // give question
+    // check for player input
+    
+}
    
 
 };
