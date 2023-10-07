@@ -10,7 +10,7 @@ class Npc
     string name;
 
 public:
-    Npc(string_view n) : name{n} {}
+    Npc() {}
 
     void saveGame()
     {
