@@ -8,16 +8,16 @@ using namespace std;
 class Npc
 {
     string name;
+    string type;
 
 public:
-    Npc() {}
+    Npc(string name, string type) {}
 
-    void saveGame()
+    virtual void giveQuestion()
     {
-        
-    }
 
-    void recieveAttack()
+    }
+    virtual void actionOnceDefeated()
     {
 
     }

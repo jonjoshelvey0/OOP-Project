@@ -16,21 +16,16 @@
 
 using namespace std;
 
-<<<<<<< HEAD
-// void playGame();
-
-=======
->>>>>>> 304ffd24d28ba01254388d0dd1bb1680058fcc3e
 int main()
 {
     QuestionBank questionBank;
 
-    //cout << questionBank.geographyQuestions[0][0] << " " << questionBank.geographyQuestions[0][1];
+    // cout << questionBank.geographyQuestions[0][0] << " " << questionBank.geographyQuestions[0][1];
     // cout << questionBank.scienceQuestions[0][0] << " " << questionBank.scienceQuestions[0][1] <<
     //  " " << questionBank.scienceQuestions[0][2] << " " << questionBank.scienceQuestions[0][3];
 
     MathsMinotaur m;
-
+    
     m.giveDivisonQuestion();
     
     while (false)
@@ -47,11 +42,7 @@ int main()
         {
             cout << "newgame selected ...\n";
             std::this_thread::sleep_for(std::chrono::seconds(1));
-<<<<<<< HEAD
-            //playGame();
-=======
             playGame(questionBank);
->>>>>>> 304ffd24d28ba01254388d0dd1bb1680058fcc3e
         }
         else if (selection == "2")
         {

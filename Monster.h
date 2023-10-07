@@ -7,19 +7,19 @@ using namespace std;
 
 class Monster : public Npc
 {
-    string type;
     int damage;
 
 public:
-    Monster()
+    Monster(string name, string type) : Npc{name, type} 
     {
-
+        
     }
 
     void onceDefeated()
     {
 
     }
+<<<<<<< HEAD
 
     void giveQuestion(Player& abc)
     {
@@ -41,6 +41,8 @@ public:
 
 
 
+=======
+>>>>>>> a93f6961f560eb258a0e4c6ddab2e0d1f4ec71fb
 };
 
 #endif

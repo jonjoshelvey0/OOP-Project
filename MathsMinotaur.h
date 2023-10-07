@@ -10,6 +10,8 @@ class MathsMinotaur : public Monster
 {
 
 public:
+    MathsMinotaur(string name, string type) : Monster{name, type} {}
+
     void giveMultTable() // Random generator of a multiplication quesiton
     {
 
