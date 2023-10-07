@@ -28,7 +28,7 @@ int main()
 
     // m.giveDivisonQuestion();
     
-    while (false)
+    while (true)
     {
         cout << "\033[2J\033[1;1H";  // clears screen
         cout << "Welcome to Quest4Knowledge!\n\n";
