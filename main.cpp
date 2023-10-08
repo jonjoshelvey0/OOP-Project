@@ -16,13 +16,31 @@
 
 using namespace std;
 
+void rulesPage()
+{
+    // show rules
+}
+
+// TO DO:
+// implement grammargoblin
+// implement elf
+// do rules page
+// fix division with maths minotaur
+// lookover functions in all the monsters
+// // do input checking everywhere and try to break the game to find bugs
+// implement saving game and loading in saved game
+// a makefile?
+// unit testing for ollie burkin 
+// put in questions in the text files
+//
+
 int main()
 {
     QuestionBank::fillGeographyQuestions();
     QuestionBank::fillScienceQuestions();
     QuestionBank::fillGrammarQuestions();
     QuestionBank::fillNames();
-    
+
     while (true)
     {
         cout << "\033[2J\033[1;1H";  // clears screen
@@ -32,6 +50,9 @@ int main()
         cout << "Enter selection: ";
         string selection;
         cin >> selection;
+
+        std::cin.clear(); // put us back in 'normal' operation mode
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // and remove the bad input
 
         if (selection == "1")
         {
@@ -46,7 +67,7 @@ int main()
         }
         else if (selection == "3")
         {
-            cout << "not implemented yet ...\n";
+            rulesPage();
             std::this_thread::sleep_for(std::chrono::seconds(1));
         }
         else if (selection == "4")

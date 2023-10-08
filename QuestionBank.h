@@ -35,8 +35,8 @@ void fillScienceQuestions()
         getline(myFile, question); // reads next line, will be the answer
         QuestionBank::scienceQuestions[QuestionBank::scienceQuestions.size() - 1].push_back(question); // pushes back answer
 
-        int x = 4;
-        while (x--)
+        int x = 3;
+        while (x--) // read next 3 lines as wrong answers
         {
             getline(myFile, question); // reads next line, will be the wrong answer
             QuestionBank::scienceQuestions[QuestionBank::scienceQuestions.size() - 1].push_back(question); // pushes back wrong answer

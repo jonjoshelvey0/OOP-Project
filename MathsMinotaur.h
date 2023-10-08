@@ -42,7 +42,7 @@ public:
             return true;
         }
 
-        cout << " INCORRECT, the correct answer is !! " << correctAnswer << ".\n";
+        cout << "INCORRECT, the correct answer is !! " << correctAnswer << ".\n";
         return false;
     }
 

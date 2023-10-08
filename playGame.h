@@ -20,22 +20,24 @@ using namespace std;
 
 Npc* getNPC()
 {
-    return new MathsMinotaur{};
 
     // if (Random::get(1, 10) == 1) // return an elf instead of a monster, 1 in 10 chance
     //     return new Elf{};
     
-    // switch (Random::get(1, 4))
-    // {
-    //     case 1:
-    //         return new ScienceSphynx{};
-    //     case 2:
-    //         return new MathsMinotaur{};
-    //     case 3:
-    //         return new GeographyGiant{};
-    //     case 4:
-    //         return new GrammarGoblin{};
-    // }
+return new ScienceSphynx{};
+
+    switch (Random::get(1, 4))
+    {
+        case 1:
+            return new ScienceSphynx{};
+        case 2:
+            return new MathsMinotaur{};
+        case 3:
+            return new GeographyGiant{};
+        case 4:
+            return new ScienceSphynx{};
+            //return new GrammarGoblin{};
+    }
 
     return NULL;
 }
@@ -73,12 +75,14 @@ void playGame()
         else                                        // incorrect
             npc -> actionWhenIncorrect(player);
         
+        std::cin.clear(); // put us back in 'normal' operation mode
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // and remove the bad input
+        
         cout << "\n(Press Enter to Continue) ";
-        cin.ignore();
         cin.ignore();
 
         cout << "\033[2J\033[1;1H";
-    
+        
         if (player.getHealth() < 1)
         {
             cout << "game over.\n\n";
