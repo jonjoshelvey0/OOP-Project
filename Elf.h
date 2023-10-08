@@ -16,7 +16,7 @@ public:
 
     }
 
-    void giveQuestion(Player& player)
+    bool giveQuestion()
     {
         
     }
