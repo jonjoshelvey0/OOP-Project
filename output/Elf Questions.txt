@@ -27,7 +27,6 @@ Snake
 Elephant
 Tiger
 Giraffe
-Lion
 
 What is the next number in the sequence: 1, 2, 4, 8, ?
 10

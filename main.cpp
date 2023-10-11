@@ -48,22 +48,18 @@ void rulesPage()
 
 // TO DO:
 // implement elf
-// fix division with maths minotaur
 // lookover functions in all the monsters
-// // do input checking everywhere and try to break the game to find bugs
-// implement saving game and loading in saved game
+// do input checking everywhere and try to break the game to find bugs
 // a makefile?
 // unit testing for ollie burkin
 // put in questions in the text files
 //
 
-
-
 int main()
 {
     QuestionBank::fillGeographyQuestions();
     QuestionBank::fillScienceQuestions();
-    QuestionBank::fillGrammarQuestions();
+    QuestionBank::fillElfQuestions();
     QuestionBank::fillNames();
 
     while (true)
@@ -87,7 +83,7 @@ int main()
         }
         else if (selection == "2")
         {
-            cout << "not implemented yet ...\n";
+            playGame(true);
             std::this_thread::sleep_for(std::chrono::seconds(1));
         }
         else if (selection == "3")

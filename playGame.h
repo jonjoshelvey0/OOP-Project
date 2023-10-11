@@ -21,9 +21,8 @@ using namespace std;
 Npc* getNPC()
 {
 
-    // if (Random::get(1, 10) == 1) // return an elf instead of a monster, 1 in 10 chance
-    //     return new Elf{};
-
+    if (Random::get(1, 1) == 1) // return an elf instead of a monster, 1 in 10 chance
+        return new Elf{};
 
     switch (Random::get(1, 3))
     {
@@ -89,6 +88,7 @@ void playGame(bool savedGame)
         if (loadSavedGame(player))
         {
             cout << "loading saved game...\n";
+
             std::this_thread::sleep_for(std::chrono::seconds(1));
             cout << "\033[2J\033[1;1H";
         }
@@ -99,12 +99,13 @@ void playGame(bool savedGame)
             return;
         }
     }
-    
-    string name;
-    cout << "Enter your name: "; // have to implement input checking 
-    cin >> name;
-
-    player.setName(name);
+    else
+    {
+        string name;
+        cout << "Enter your name: "; // have to implement input checking 
+        cin >> name;
+        player.setName(name);
+    }
 
     while (true)
     {
@@ -139,11 +140,8 @@ void playGame(bool savedGame)
         delete npc;
     }
 
-    if (savedGame)
-    {
-        ofstream MyFile("SavedGame.txt");
-        MyFile.close();
-    }
+    ofstream MyFile("SavedGame.txt");
+    MyFile.close();
 }
 
 #endif

@@ -15,12 +15,11 @@ public:
     void actionOnceDefeated(Player& player)
     {
          player.recieveDamage(-blessing);
-        cout << "\n" << name << " blessed you with " << blessing << "additional health.\n";
+        cout << "\n" << name << " blessed you with " << blessing << " additional health.\n";
     }
 
     void actionWhenIncorrect(Player& player)
     {
-        
         cout << "The elf has fleed, you have lost your opportunity :( \n";
     }
 
@@ -29,7 +28,7 @@ public:
         // get random num from 0 to size of question array, to make sure that the number will be in bounds
         int index = Random::get(0, QuestionBank::elfQuestions.size() - 1);
         
-        cout << QuestionBank::elfQuestions[index][0] << "\n\n";
+        cout <<'\n' << QuestionBank::elfQuestions[index][0] << "\n\n";
 
         vector<bool> questionUsed(5, false);
         string ans;
