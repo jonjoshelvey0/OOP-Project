@@ -1,0 +1,59 @@
+What number should replace the question mark ... 1, 2, 3, 5, ?
+8 
+22
+7
+18
+
+Which of the following is different from the others?
+Circle
+Square
+Triangle
+Line
+
+If John is taller than Mark, and Mark is taller than Bob, and Julia is taller than John who is the tallest among them?
+Julia
+Mark
+Bob
+John
+
+What letter should replace the question mark A, D, G, J, ?
+M
+K
+H
+I
+
+Which animal does not belong in this group?
+Snake
+Elephant
+Tiger
+Giraffe
+
+What is the next number in the sequence: 1, 2, 4, 8, ?
+10
+12
+14
+16
+
+What letter is in the middle of the alphabet?
+L
+M
+N
+O
+
+If Tom is the father of Emily and Emily is the daughter of Peter, who is Tom to Peter?
+Brother
+Father
+Uncle
+Son
+
+What comes next in this sequence: January, February, March, April, May, ?
+June
+July
+August
+September
+
+If red is related to apples, and yellow is related to bananas, what color is related to oranges?
+Orange
+Red
+Yellow
+Green
