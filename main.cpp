@@ -57,8 +57,6 @@ void rulesPage()
 // put in questions in the text files
 //
 
-
-
 int main()
 {
     QuestionBank::fillGeographyQuestions();
@@ -83,7 +81,7 @@ int main()
         {
             cout << "newgame selected ...\n";
             std::this_thread::sleep_for(std::chrono::seconds(1));
-            playGame(false);
+            playGame();
         }
         else if (selection == "2")
         {
