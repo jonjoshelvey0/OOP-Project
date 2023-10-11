@@ -33,84 +33,77 @@ public:
     {
         int x = Random::get(1, 12);
         int y = Random::get(1, 12);
-        int userAnswer;
-        int correctAnswer = x * y;
 
-        cout << "What is " << x << " * " << y << "? ";
-        cin >> userAnswer;
-
-        if (userAnswer == correctAnswer)
-        {
-            cout << "CORRECT !!\n";
+        if (verifyOutput(x, '*', y, x * y))
             return true;
-        }
-
-        cout << "INCORRECT, the correct answer is !! " << correctAnswer << ".\n";
-        return false;
+        else
+            return false;
     }
 
     bool giveDivisonQuestion() // random generator of a division quesiton
     {
         int x = Random::get(1, 12);
         int y = Random::get(1, 12);
-        int userAnswer;
 
-        cout << "\n";
-
-        cout << x << " " << y << " " << x * y << "\n";
-
-        int correctAnswer = (x*y)/x;
-
-        cout << "What is " << x * y << " / " << x << "? ";
-        cin >> userAnswer;
-
-        if (userAnswer == correctAnswer)
-        {
-            cout << "CORRECT !! \n";
+        if (verifyOutput(x * y, '/', x, y))
             return true;
-        }
-
-        cout << "INCORRECT !! The correct answer is " << correctAnswer << ".\n";
-        return false;
+        else
+            return false;
     }
 
     bool additionQuestion()
     {
         int x = Random::get(1, 100);
         int y = Random::get(1, 100);
-        int answerC = x + y;
-        int userAnswer;
 
-        cout << "What is " << x << " +  " << y << "? ";
-        cin >> userAnswer;
-
-        if (userAnswer == answerC)
-        {
-            cout << "CORRECT !! \n";
+        if (verifyOutput(x, '+', y, x + y))
             return true;
-        }
-
-        cout << "INCORRECT !! The correct answer is " << answerC << ".\n";
-        return false;
+        else
+            return false;
     }
 
     bool subtractionQuestion()
     {
         int x = Random::get(1, 100);
         int y = Random::get(1, 100);
-        int answerC = x - y;
-        int userAnswer;
 
-        cout << "What is " << x << " -  " << y << "? ";
-        cin >> userAnswer;
+        if (verifyOutput(x, '-', y, x - y))
+            return true;
+        else
+            return false;
+    }
 
-        if (userAnswer == answerC)
+    bool verifyOutput(int leftOperand, char symbol, int rightOperand, int answer)
+    {
+        string userAnswer;
+
+        while (true)
         {
-            cout << "CORRECT !! " << endl;
+            cout << "What is " << leftOperand << ' ' << symbol << ' ' << rightOperand << "? ";
+            getline(cin, userAnswer);
+
+            bool flag = true;
+            for (int a = 0; a < static_cast<int>(userAnswer.size()); ++a)
+            {
+                if (userAnswer[a] == ' ' || userAnswer[a] < '0' || userAnswer[a] > '9')
+                    flag = false;
+            }
+
+            if (flag) // correct input
+                break;
+
+            cout << "\x1b[1A" // Move cursor up one
+                 << "\x1b[2K" // Delete the entire line
+                 << "\r";
+        }
+
+        if (stoi(userAnswer) == answer)
+        {
+            cout << "\n\u001b[32mCORRECT!!\u001b[0m\n";
             return true;
         }
 
-        cout << "INCORRECT !! The correct answer is " << answerC << ".\n";
+        cout << "\n\u001b[31mINCORRECT\u001b[0m, the correct answer is " << answer << ".\n";
         return false;
     }
 };

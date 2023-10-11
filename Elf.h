@@ -11,15 +11,17 @@ class Elf : public Npc
 
 public:
     Elf() : Npc{"Elf"} {}
-    
-    void actionOnceDefeated(Player& player)
+
+    void actionOnceDefeated(Player &player)
     {
-         player.recieveDamage(-blessing);
-        cout << "\n" << name << " blessed you with " << blessing << " additional health.\n";
+        player.recieveDamage(-blessing);
+        cout << "\n"
+             << name << " blessed you with " << blessing << " additional health.\n";
     }
 
-    void actionWhenIncorrect(Player& player)
+    void actionWhenIncorrect(Player &player)
     {
+        player.getHealth();
         cout << "The elf has fleed, you have lost your opportunity :( \n";
     }
 
@@ -27,8 +29,9 @@ public:
     {
         // get random num from 0 to size of question array, to make sure that the number will be in bounds
         int index = Random::get(0, QuestionBank::elfQuestions.size() - 1);
-        
-        cout <<'\n' << QuestionBank::elfQuestions[index][0] << "\n\n";
+
+        cout << '\n'
+             << QuestionBank::elfQuestions[index][0] << "\n\n";
 
         vector<bool> questionUsed(5, false);
         string ans;
@@ -52,21 +55,34 @@ public:
             questionUsed[randIndex] = true;
         }
 
+        string selection;
 
-        cout << "\nEnter selection: ";
-        string userSelection;
-        cin >> userSelection;
-
-        if (userSelection == ans)
+        while (true)
         {
-            cout << "CORRECT !!\n";
+            cout << "\nEnter selection: ";
+            getline(cin, selection);
+
+            if (selection.size() == 1) // valid output so far
+            {
+                if (selection[0] > '0' && selection[0] < '5') // if between 1 and 4 inclusive, valid
+                    break;
+            }
+
+            cout << "\x1b[1A" // Move cursor up one
+                 << "\x1b[2K" // Delete the entire line
+                 << "\r"
+                 << "\x1b[1A"; // Move cursor up one
+        }
+
+        if (selection == ans)
+        {
+            cout << "\u001b[32mCORRECT\u001b[0m!!\n";
             return true;
         }
 
-        cout << "INCORRECT, the correct answer is " << QuestionBank::elfQuestions[index][1] << ".\n";
+        cout << "\u001b[31mINCORRECT\u001b[0m, the correct answer is " << QuestionBank::elfQuestions[index][1] << ".\n";
         return false;
     }
-
 };
 
 #endif
