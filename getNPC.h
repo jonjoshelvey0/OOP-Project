@@ -18,7 +18,10 @@ Npc *getNPC()
     if (Random::get(1, 10) == 1) // return an elf instead of a monster, 1 in 10 chance
         return new Elf{};
 
-    switch (Random::get(1, 3))
+    int x = Random::get(1, 3);
+    //x = (x == 4 ? 2 : x); // basically making the maths minotaur pop up more because its more fun
+
+    switch (x)
     {
     case 1:
         return new ScienceSphynx{};

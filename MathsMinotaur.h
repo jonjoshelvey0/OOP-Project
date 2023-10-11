@@ -13,9 +13,6 @@ public:
 
     bool giveQuestion()
     {
-
-        return giveDivisonQuestion();
-
         switch (Random::get(1, 4))
         {
         case 1:
@@ -27,6 +24,8 @@ public:
         case 4:
             return subtractionQuestion();
         }
+
+        return true;
     }
 
     bool giveMultTable() // Random generator of a multiplication quesiton
@@ -85,9 +84,15 @@ public:
             bool flag = true;
             for (int a = 0; a < static_cast<int>(userAnswer.size()); ++a)
             {
+                if (a == 0 && userAnswer[0] == '-' && userAnswer.size() > 1)
+                    continue;
+
                 if (userAnswer[a] == ' ' || userAnswer[a] < '0' || userAnswer[a] > '9' || userAnswer.size() > 6)
                     flag = false;
             }
+
+            if (userAnswer.size() == 0)
+                flag = false;
 
             if (flag) // correct input
                 break;
