@@ -1,11 +1,253 @@
-question
-correct answer
-incorrect answer
-incorrect answer
-incorrect answer
-
 What is the acceleration of gravity on Earth's surface? in (m/s)^2
 9.8
 9.9
 10
 9
+
+What is the chemical symbol for water?
+H2O
+CO2
+O2
+NaCl
+
+Which planet is known as the "Red Planet"?
+Venus
+Mars
+Jupiter
+Saturn
+
+What is the smallest particle of an element that retains its properties?
+tom
+Molecule
+Proton
+Neutron
+
+Which gas do plants absorb from the atmosphere during photosynthesis?
+Oxygen
+Carbon dioxide
+Nitrogen
+Hydrogen
+
+What is the force that pulls objects toward the center of the Earth?
+Gravity
+Magnetism
+Friction
+Tension
+
+Which state of matter has a fixed volume but takes the shape of its container?
+Solid
+Liquid
+Gas
+Plasma
+
+What is the chemical symbol for gold?
+Go
+Ge
+Au
+Ag
+
+Which gas makes up the majority of Earth's atmosphere?
+Oxygen
+Nitrogen
+Carbon dioxide
+Hydrogen
+
+What is the process by which plants make their own food using sunlight?
+Respiration
+Photosynthesis
+Fermentation
+Digestion
+
+What is the powerhouse of the cell, responsible for producing energy?
+Nucleus
+Mitochondrion
+Ribosome
+Chloroplast
+
+What is the chemical formula for table salt?
+NaCl
+H2O
+CO2
+HCl
+
+What is the largest planet in our solar system?
+Earth
+Mars
+Jupiter
+Venus
+
+Which of these is NOT a primary color of light?
+Red
+Blue
+Yellow
+Green
+
+What is the process of a liquid turning into a gas at its boiling point?
+Evaporation
+Condensation
+Sublimation
+Vaporization
+Which of the following is a renewable source of energy?
+Coal
+Natural gas
+Solar power
+Nuclear energy
+
+What is the chemical symbol for carbon?
+Co
+Ca
+C
+Cr
+
+What is the study of fossils called?
+Archaeology
+Paleontology
+Geology
+Anthropology
+
+What is the process by which plants release water vapor into the atmosphere?
+Transpiration
+Perspiration
+Respiration
+Evaporation
+
+Which planet is known for its beautiful rings?
+Mars
+Venus
+Jupiter
+Saturn
+     What is the main component of Earth's core?
+Iron
+Gold
+Silver
+Copper
+
+What is the chemical symbol for carbon?
+Co
+Ca
+C
+Cr
+
+Which gas is essential for respiration in humans and other animals?
+Oxygen
+Carbon dioxide
+Nitrogen
+Hydrogen
+
+What is the process of one tectonic plate sliding beneath another?
+Subduction
+Erosion
+Volcanism
+Uplift
+    
+Which planet is often referred to as Earth's "sister planet" due to its similar size and composition?
+Mars
+Venus
+Jupiter
+Mercury
+
+What is the process by which plants take in water and nutrients from the soil?
+Photosynthesis
+Transpiration
+Germination
+Root absorption
+
+Which gas do humans exhale when they breathe out?
+Oxygen
+Carbon dioxide
+Nitrogen
+Hydrogen
+
+What is the chemical symbol for helium?
+He
+H
+Hy
+Ha
+
+What is the process of a gas turning into a liquid called?
+Condensation
+Evaporation
+Sublimation
+Vaporization
+
+Which gas do plants release during photosynthesis?
+Oxygen
+Carbon dioxide
+Nitrogen
+Hydrogen
+
+What is the SI unit of electric current?
+Volt
+Watt
+Ampere
+Ohm
+
+What is the chemical symbol for silver?
+Si
+Sr
+Ag
+Sl
+
+What is the study of the Earth's structure and the processes that shape it called?
+Biology
+Chemistry
+Geology
+Meteorology
+
+Which gas is responsible for the Earth's ozone layer?
+Oxygen
+Carbon dioxide
+Nitrogen
+Ozone
+
+What is the process of a solid turning directly into a gas called?
+Evaporation
+Sublimation
+Condensation
+Vaporization
+
+What is the chemical symbol for lead? L
+P
+Le
+Pb
+
+Which force keeps objects in motion until acted upon by an external force?
+Inertia
+Friction
+Gravity
+Tension
+
+What is the SI unit of temperature?
+Kelvin
+Fahrenheit
+Celsius
+Joule
+
+What is the process of a liquid turning into a solid called?
+Condensation
+Sublimation
+Freezing
+Vaporization
+
+Which gas do fire extinguishers typically contain to suppress fires?
+Oxygen
+Carbon dioxide
+Nitrogen
+Helium
+
+What is the chemical symbol for copper?
+Co
+Cu
+Cr
+Ca
+
+Which subatomic particle carries a positive electric charge?
+Electron
+Proton
+Neutron
+Photon
+
+What is the process by which an animal sheds its outer layer to allow for growth?
+Regeneration
+Metamorphosis
+Molting
