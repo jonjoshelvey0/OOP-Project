@@ -13,6 +13,9 @@ public:
 
     bool giveQuestion()
     {
+
+        return giveDivisonQuestion();
+
         switch (Random::get(1, 4))
         {
         case 1:
@@ -48,14 +51,17 @@ public:
 
     bool giveDivisonQuestion() // random generator of a division quesiton
     {
-        int dividend = Random::get(1, 100);
-        int divisor = Random::get(1, 10);
+        int x = Random::get(1, 12);
+        int y = Random::get(1, 12);
         int userAnswer;
 
-        dividend = dividend - (dividend % divisor);
-        int correctAnswer = dividend / divisor;
+        cout << "\n";
 
-        cout << "What is " << dividend << " divided by " << divisor << "? ";
+        cout << x << " " << y << " " << x * y << "\n";
+
+        int correctAnswer = (x*y)/x;
+
+        cout << "What is " << x * y << " / " << x << "? ";
         cin >> userAnswer;
 
         if (userAnswer == correctAnswer)
@@ -75,7 +81,7 @@ public:
         int answerC = x + y;
         int userAnswer;
 
-        cout << "What is " << x << " divided by " << y << "? ";
+        cout << "What is " << x << " +  " << y << "? ";
         cin >> userAnswer;
 
         if (userAnswer == answerC)
@@ -83,7 +89,7 @@ public:
             cout << "CORRECT !! \n";
             return true;
         }
-        
+
         cout << "INCORRECT !! The correct answer is " << answerC << ".\n";
         return false;
     }
@@ -95,7 +101,7 @@ public:
         int answerC = x - y;
         int userAnswer;
 
-        cout << "What is " << x << " subtracted by " << y << "? ";
+        cout << "What is " << x << " -  " << y << "? ";
         cin >> userAnswer;
 
         if (userAnswer == answerC)

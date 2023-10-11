@@ -23,10 +23,9 @@ Npc* getNPC()
 
     // if (Random::get(1, 10) == 1) // return an elf instead of a monster, 1 in 10 chance
     //     return new Elf{};
-    
-return new ScienceSphynx{};
 
-    switch (Random::get(1, 4))
+
+    switch (Random::get(1, 3))
     {
         case 1:
             return new ScienceSphynx{};
@@ -34,9 +33,7 @@ return new ScienceSphynx{};
             return new MathsMinotaur{};
         case 3:
             return new GeographyGiant{};
-        case 4:
-            return new ScienceSphynx{};
-            //return new GrammarGoblin{};
+        
     }
 
     return NULL;
@@ -75,8 +72,8 @@ void playGame()
         else                                        // incorrect
             npc -> actionWhenIncorrect(player);
         
-        std::cin.clear(); // put us back in 'normal' operation mode
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // and remove the bad input
+         std::cin.clear(); // put us back in 'normal' operation mode
+         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // and remove the bad input
         
         cout << "\n(Press Enter to Continue) ";
         cin.ignore();

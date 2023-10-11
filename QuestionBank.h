@@ -11,6 +11,7 @@ namespace QuestionBank
 {
     vector<vector<string>> geographyQuestions;
     vector<vector<string>> scienceQuestions;
+    vector<vector<string>> elfQuestions;
     //static vector<vector<string>> grammarQuestions;   NOT DONE
     vector<string> names;
 
@@ -121,6 +122,8 @@ void fillNames()
     
     myFile.close();
 }
+
+
 }
 
 #endif
