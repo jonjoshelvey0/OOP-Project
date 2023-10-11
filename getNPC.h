@@ -1,10 +1,6 @@
 #ifndef GETNPC
 #define GETNPC
 
-#include <iostream>
-#include <string>
-#include <thread>
-
 #include "Random.h"
 #include "QuestionBank.h"
 #include "Player.h"
@@ -14,8 +10,6 @@
 #include "GeographyGiant.h"
 #include "MathsMinotaur.h"
 #include "ScienceSphynx.h"
-#include "playGame.h"
-#include "rulesPage.h"
 
 using namespace std;
 

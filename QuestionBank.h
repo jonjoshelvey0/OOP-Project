@@ -17,8 +17,7 @@ namespace QuestionBank
     void fillScienceQuestions()
     {
         ifstream myFile;
-        myFile.open("Science Questions.txt");
-
+        myFile.open("_Science Questions.txt");
         string question;
 
         if (myFile.is_open()) // test
@@ -51,7 +50,7 @@ namespace QuestionBank
     void fillGeographyQuestions()
     {
         ifstream myFile;
-        myFile.open("Geography Questions.txt");
+        myFile.open("_Geography Questions.txt");
 
         string question;
 
@@ -79,7 +78,7 @@ namespace QuestionBank
     void fillNames()
     {
         ifstream myFile;
-        myFile.open("NPC Names.txt");
+        myFile.open("_NPC Names.txt");
 
         string question;
 
@@ -97,7 +96,7 @@ namespace QuestionBank
     void fillElfQuestions()
     {
         ifstream myFile;
-        myFile.open("Elf Questions.txt");
+        myFile.open("_Elf Questions.txt");
 
         string question;
 

@@ -16,13 +16,11 @@ public:
         // get random num from 0 to size of question array, to make sure that the number will be in bounds
         int index = Random::get(0, QuestionBank::geographyQuestions.size() - 1);
 
-        cout << QuestionBank::geographyQuestions[index][0] << ' ';
-
         string selection;
 
         while (true)
         {
-            cout << "\nEnter selection: ";
+            cout << QuestionBank::geographyQuestions[index][0] << ' ';
             getline(cin, selection);
 
             bool flag = true;

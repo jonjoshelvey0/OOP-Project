@@ -12,9 +12,7 @@ class Player
     int health = 100; // out of 100, cant go above
 
 public:
-    Player()
-    {
-    }
+    Player() {}
 
     int getScore()
     {

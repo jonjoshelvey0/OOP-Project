@@ -85,7 +85,7 @@ public:
             bool flag = true;
             for (int a = 0; a < static_cast<int>(userAnswer.size()); ++a)
             {
-                if (userAnswer[a] == ' ' || userAnswer[a] < '0' || userAnswer[a] > '9')
+                if (userAnswer[a] == ' ' || userAnswer[a] < '0' || userAnswer[a] > '9' || userAnswer.size() > 6)
                     flag = false;
             }
 

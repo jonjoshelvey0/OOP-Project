@@ -64,20 +64,27 @@ void playGame(bool savedGame)
         cout << "\033[2J\033[1;1H";
 
         if (player.getHealth() < 1)
-        {
-            cout << "game over.\n\n";
-            endGameAssesment(player);
-            std::this_thread::sleep_for(std::chrono::seconds(2));
             break;
-        }
-        else
-            saveGame(player);
+
+        saveGame(player);
 
         delete npc;
     }
 
-    ofstream MyFile("SavedGame.txt"); // clear saved game
+    ofstream MyFile("_SavedGame.txt"); // clear saved game
     MyFile.close();
+
+    string s = "game over.";
+    cout << '\n';
+    for (int a = 0; a < static_cast<int>(s.size()); ++a)
+    {
+        cout << s[a];
+        cout.flush();
+        std::this_thread::sleep_for(std::chrono::milliseconds(70));
+    }
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+    
+    endGameAssesment(player);
 }
 
 #endif

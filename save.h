@@ -9,9 +9,8 @@ using namespace std;
 
 void saveGame(Player &player)
 {
-    ofstream Myfile("SavedGame.txt");
-    Myfile << player.getName() << "\n"
-           << player.getScore() << "\n"
+    ofstream Myfile("_SavedGame.txt");
+    Myfile << player.getScore() << "\n"
            << player.getHealth();
     Myfile.close();
 }
@@ -19,7 +18,7 @@ void saveGame(Player &player)
 bool loadSavedGame(Player &player) // returns if successful or not
 {
     ifstream myFile;
-    myFile.open("SavedGame.txt");
+    myFile.open("_SavedGame.txt");
 
     string data;
     getline(myFile, data);
@@ -27,13 +26,11 @@ bool loadSavedGame(Player &player) // returns if successful or not
     if (data == "") // no saved game
         return false;
 
-    player.name = data;
-
-    getline(myFile, data);
     player.score = stoi(data);
 
     getline(myFile, data);
     player.health = stoi(data);
+    myFile.close();
 
     return true;
 }

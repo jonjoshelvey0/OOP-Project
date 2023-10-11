@@ -41,7 +41,7 @@ public:
         }
 
         string selection;
-        
+
         while (true)
         {
             cout << "\nEnter selection: ";

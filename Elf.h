@@ -22,7 +22,7 @@ public:
     void actionWhenIncorrect(Player &player)
     {
         player.getHealth();
-        cout << "The elf has fleed, you have lost your opportunity :( \n";
+        cout << "\nThe elf has fleed, you have lost your opportunity :( \n";
     }
 
     bool giveQuestion()
@@ -30,8 +30,7 @@ public:
         // get random num from 0 to size of question array, to make sure that the number will be in bounds
         int index = Random::get(0, QuestionBank::elfQuestions.size() - 1);
 
-        cout << '\n'
-             << QuestionBank::elfQuestions[index][0] << "\n\n";
+        cout << QuestionBank::elfQuestions[index][0] << "\n\n";
 
         vector<bool> questionUsed(5, false);
         string ans;
@@ -76,11 +75,11 @@ public:
 
         if (selection == ans)
         {
-            cout << "\u001b[32mCORRECT\u001b[0m!!\n";
+            cout << "\n\u001b[32mCORRECT\u001b[0m!!\n";
             return true;
         }
 
-        cout << "\u001b[31mINCORRECT\u001b[0m, the correct answer is " << QuestionBank::elfQuestions[index][1] << ".\n";
+        cout << "\n\u001b[31mINCORRECT\u001b[0m, the correct answer is " << QuestionBank::elfQuestions[index][1] << ".\n";
         return false;
     }
 };
