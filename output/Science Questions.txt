@@ -17,7 +17,7 @@ Jupiter
 Saturn
 
 What is the smallest particle of an element that retains its properties?
-tom
+Atom
 Molecule
 Proton
 Neutron
@@ -87,6 +87,7 @@ Evaporation
 Condensation
 Sublimation
 Vaporization
+
 Which of the following is a renewable source of energy?
 Coal
 Natural gas
@@ -116,7 +117,8 @@ Mars
 Venus
 Jupiter
 Saturn
-     What is the main component of Earth's core?
+
+ What is the main component of Earth's core?
 Iron
 Gold
 Silver
@@ -210,6 +212,7 @@ What is the chemical symbol for lead? L
 P
 Le
 Pb
+De
 
 Which force keeps objects in motion until acted upon by an external force?
 Inertia
@@ -251,3 +254,4 @@ What is the process by which an animal sheds its outer layer to allow for growth
 Regeneration
 Metamorphosis
 Molting
+Vibrating
