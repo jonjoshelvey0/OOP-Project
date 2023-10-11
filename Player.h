@@ -14,8 +14,6 @@ class Player
 public:
     Player()
     {
-        //cout << "Enter your name: "; // have to implement input checking 
-        //cin >> name;
     }
 
     int getScore()
@@ -37,6 +35,18 @@ public:
     {
            health -= damage;
     }
+
+    string_view getName()
+    {
+        return name;
+    }
+
+    void setName(string n)
+    {
+        name = n;
+    }
+
+    friend bool loadSavedGame(Player& player);
 };
 
 #endif

@@ -46,7 +46,9 @@ void endGameAssesment(Player& player)
 
 void saveGame(Player& player)
 {
-
+    ofstream Myfile("SavedGame.txt");
+    Myfile << player.getName() << "\n" << player.getScore() << "\n" << player.getHealth();
+    Myfile.close();
 }
 
 void showLeaderboard()
@@ -54,11 +56,55 @@ void showLeaderboard()
 
 }
 
-void playGame()
+bool loadSavedGame(Player& player) // returns if successful or not
+{
+    ifstream myFile;
+    myFile.open("SavedGame.txt");
+
+    string data;
+    getline(myFile, data);
+
+    if (data == "") // no saved game
+        return false;
+    
+    player.name = data;
+
+    getline(myFile, data);
+    player.score = stoi(data);
+
+    getline(myFile, data);
+    player.health = stoi(data);
+
+    return true;
+}
+
+void playGame(bool savedGame)
 {
     cout << "\033[2J\033[1;1H";
 
     Player player;
+
+    if (savedGame)
+    {
+        if (loadSavedGame(player))
+        {
+            cout << "loading saved game...\n";
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            cout << "\033[2J\033[1;1H";
+        }
+        else // if not successful, return to main menu
+        {
+            cout << "no saved game...\n";
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            return;
+        }
+    }
+    
+    string name;
+    cout << "Enter your name: "; // have to implement input checking 
+    cin >> name;
+
+    player.setName(name);
 
     while (true)
     {
@@ -91,6 +137,12 @@ void playGame()
             saveGame(player);
         
         delete npc;
+    }
+
+    if (savedGame)
+    {
+        ofstream MyFile("SavedGame.txt");
+        MyFile.close();
     }
 }
 
