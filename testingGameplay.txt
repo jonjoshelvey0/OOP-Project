@@ -1,0 +1,20 @@
+Case 1: Entering unrelated characters/symbols "%", "/", etc. 
+Expected output: incorrect answer minus health or will prompt for another answer 
+Output: incorrect answer minus health or will prompt for another answer 
+
+Case 2: Testing capital/lowercase spelling for geographyGiant
+Expected output: Capital cities must have a capital letter to start otherwise incorrect
+Output: Must have capital letter for city names, lowercase is incorrect
+
+Case 3: The same value as a negatives and positive MathsMinotaur
+Expected output: Should be incorrect if the sign is wrong but the value is the same
+Output: Must have the correct sign as well as the value 
+
+Edge Cases: inputs (1000000, 0.0000001, -99999999)
+ Expected output: incorrect or will ask for a valid output
+ Output: asks for a valid output for MathsMinotaur and incorrect for geographyGiant
+
+Performance Cases: (100000000000, 0.000000001, -99, Athens, A8ens)
+Expected performance: code runs smoothly and quickly with no error or breaks
+Performance: code performed as expected with reasonable speed and no breaks
+
