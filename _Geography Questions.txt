@@ -77,7 +77,7 @@ What is the capital of Peru?
 Lima
 
 What is the capital of Colombia?
-Bogotá
+Bogota
 
 What is the capital of Kenya?
 Nairobi
