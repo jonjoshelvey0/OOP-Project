@@ -29,10 +29,10 @@ Tiger
 Giraffe
 
 What is the next number in the sequence: 1, 2, 4, 8, ?
+16
 10
 12
 14
-16
 
 What letter is in the middle of the alphabet?
 L
@@ -41,7 +41,7 @@ N
 O
 
 If Tom is the father of Emily and Emily is the daughter of Peter, who is Tom to Peter?
-Brother
+Husband
 Father
 Uncle
 Son

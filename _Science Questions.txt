@@ -16,15 +16,9 @@ Mars
 Jupiter
 Saturn
 
-What is the smallest particle of an element that retains its properties?
-Atom
-Molecule
-Proton
-Neutron
-
 Which gas do plants absorb from the atmosphere during photosynthesis?
-Oxygen
 Carbon dioxide
+Oxygen
 Nitrogen
 Hydrogen
 
@@ -35,15 +29,15 @@ Friction
 Tension
 
 Which state of matter has a fixed volume but takes the shape of its container?
-Solid
 Liquid
+Solid 
 Gas
 Plasma
 
 What is the chemical symbol for gold?
-Go
-Ge
 Au
+Ge
+Gc
 Ag
 
 Which gas makes up the majority of Earth's atmosphere?
@@ -53,14 +47,14 @@ Carbon dioxide
 Hydrogen
 
 What is the process by which plants make their own food using sunlight?
-Respiration
 Photosynthesis
+Respiration
 Fermentation
 Digestion
 
 What is the powerhouse of the cell, responsible for producing energy?
-Nucleus
 Mitochondrion
+Nucleus
 Ribosome
 Chloroplast
 
@@ -71,15 +65,15 @@ CO2
 HCl
 
 What is the largest planet in our solar system?
+Jupiter
 Earth
 Mars
-Jupiter
 Venus
 
 Which of these is NOT a primary color of light?
+Yellow
 Red
 Blue
-Yellow
 Green
 
 What is the process of a liquid turning into a gas at its boiling point?
@@ -89,9 +83,9 @@ Sublimation
 Vaporization
 
 Which of the following is a renewable source of energy?
+Solar power
 Coal
 Natural gas
-Solar power
 Nuclear energy
 
 What is the chemical symbol for carbon?
@@ -113,21 +107,21 @@ Respiration
 Evaporation
 
 Which planet is known for its beautiful rings?
+Saturn
 Mars
 Venus
 Jupiter
-Saturn
 
- What is the main component of Earth's core?
+What is the main component of Earth's core?
 Iron
 Gold
 Silver
 Copper
 
 What is the chemical symbol for carbon?
-Co
-Ca
 C
+Ca
+Co
 Cr
 
 Which gas is essential for respiration in humans and other animals?
@@ -149,14 +143,14 @@ Jupiter
 Mercury
 
 What is the process by which plants take in water and nutrients from the soil?
-Photosynthesis
+Osmosis
 Transpiration
 Germination
 Root absorption
 
 Which gas do humans exhale when they breathe out?
-Oxygen
 Carbon dioxide
+Oxygen
 Nitrogen
 Hydrogen
 
@@ -179,21 +173,21 @@ Nitrogen
 Hydrogen
 
 What is the SI unit of electric current?
+Ampere
 Volt
 Watt
-Ampere
 Ohm
 
 What is the chemical symbol for silver?
+Ag
 Si
 Sr
-Ag
 Sl
 
 What is the study of the Earth's structure and the processes that shape it called?
+Geology
 Biology
 Chemistry
-Geology
 Meteorology
 
 Which gas is responsible for the Earth's ozone layer?
@@ -203,15 +197,15 @@ Nitrogen
 Ozone
 
 What is the process of a solid turning directly into a gas called?
-Evaporation
 Sublimation
+Evaporation
 Condensation
 Vaporization
 
-What is the chemical symbol for lead? L
+What is the chemical symbol for lead? 
+Pb
 P
 Le
-Pb
 De
 
 Which force keeps objects in motion until acted upon by an external force?
@@ -227,31 +221,32 @@ Celsius
 Joule
 
 What is the process of a liquid turning into a solid called?
+Freezing
 Condensation
 Sublimation
-Freezing
 Vaporization
 
 Which gas do fire extinguishers typically contain to suppress fires?
-Oxygen
 Carbon dioxide
+Oxygen
 Nitrogen
 Helium
 
 What is the chemical symbol for copper?
-Co
 Cu
+Co
 Cr
 Ca
 
 Which subatomic particle carries a positive electric charge?
-Electron
 Proton
+Electron
 Neutron
 Photon
 
 What is the process by which an animal sheds its outer layer to allow for growth?
+Molting
 Regeneration
 Metamorphosis
-Molting
 Vibrating
+
