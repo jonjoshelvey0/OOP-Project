@@ -9,7 +9,7 @@ class Player
 {
     string name;
     int score = 0;
-    int health = 100; // out of 100, cant go above
+    int health = 100; // starting health
 
 public:
     Player() {}
@@ -31,7 +31,7 @@ public:
 
     void recieveDamage(int damage)
     {
-           health -= damage;
+        health -= damage;
     }
 
     string_view getName()

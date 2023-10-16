@@ -3,17 +3,10 @@
 #include <thread>
 
 #include "QuestionBank.h"
-
 #include "playGame.h"
 #include "rulesPage.h"
 
 using namespace std;
-
-// TO DO:
-// relationships between classes - UML
-// lookover functions in all the monsters
-// unit testing for ollie burkin
-// put in more questions in the text files
 
 int main()
 {
@@ -32,8 +25,14 @@ int main()
         string selection;
         getline(cin, selection);
 
-        if (selection.size() != 1) // invalid output
+        if (selection.size() != 1 || (selection[0] < '1') || (selection[0] > '4')) // invalid output
+        {
+            cout << "\nPlease enter valid input (click enter) ";
+            
+            std::cin.clear();                                                   // put us back in 'normal' operation mode
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // and remove the bad input
             continue;
+        }
 
         if (selection == "1")
         {

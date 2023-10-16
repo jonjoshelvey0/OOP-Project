@@ -1,5 +1,5 @@
 #include "NPC.h"
-#include "playgame.h"
+#include "playGame.h"
 #include "Monster.h"
 #include "QuestionBank.h"
 #include <iostream>
@@ -24,6 +24,13 @@ int main(){
     cout << QuestionBank::scienceQuestions[0][2] << endl;
     cout << QuestionBank::scienceQuestions[0][3] << endl;
     cout << QuestionBank::scienceQuestions[0][4] << endl;
+    cout << endl;
+
+    cout << QuestionBank::scienceQuestions[5][0] << endl;
+    cout << QuestionBank::scienceQuestions[5][1] << endl;
+    cout << QuestionBank::scienceQuestions[5][2] << endl;
+    cout << QuestionBank::scienceQuestions[5][3] << endl;
+    cout << QuestionBank::scienceQuestions[5][4] << endl;
     cout << endl;
 
 

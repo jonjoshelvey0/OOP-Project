@@ -23,7 +23,7 @@ using namespace std;
 
 void playGame(bool savedGame)
 {
-    cout << "\033[2J\033[1;1H";
+    cout << "\033[2J\033[1;1H"; // clear screen
 
     Player player;
 
@@ -31,8 +31,9 @@ void playGame(bool savedGame)
     {
         if (!loadSavedGame(player)) // if not successful, return to main menu
         {
-            cout << "\nno saved game...\n";
-            std::this_thread::sleep_for(std::chrono::seconds(1));
+            cout << "\nno saved game... ";
+            cout.flush();
+            std::this_thread::sleep_for(std::chrono::seconds(2));
             return;
         }
     }
@@ -74,16 +75,6 @@ void playGame(bool savedGame)
     ofstream MyFile("_SavedGame.txt"); // clear saved game
     MyFile.close();
 
-    string s = "game over.";
-    cout << '\n';
-    for (int a = 0; a < static_cast<int>(s.size()); ++a)
-    {
-        cout << s[a];
-        cout.flush();
-        std::this_thread::sleep_for(std::chrono::milliseconds(70));
-    }
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    
     endGameAssesment(player);
 }
 

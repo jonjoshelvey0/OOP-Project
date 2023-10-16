@@ -2,6 +2,7 @@
 #define NPC
 
 #include <iostream>
+#include "Random.h"
 #include "Player.h"
 #include "QuestionBank.h"
 

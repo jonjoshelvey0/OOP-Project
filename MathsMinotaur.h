@@ -97,6 +97,8 @@ public:
             if (flag) // correct input
                 break;
 
+            
+
             cout << "\x1b[1A" // Move cursor up one
                  << "\x1b[2K" // Delete the entire line
                  << "\r";

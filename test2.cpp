@@ -1,5 +1,5 @@
 #include "NPC.h"
-#include "playgame.h"
+#include "playGame.h"
 #include "Monster.h"
 #include "ScienceSphynx.h"
 #include <iostream>

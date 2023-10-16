@@ -1,4 +1,3 @@
-#include "getNPC.h"
 #include "Random.h"
 #include "QuestionBank.h"
 #include "Player.h"
@@ -8,14 +7,21 @@
 #include "GeographyGiant.h"
 #include "MathsMinotaur.h"
 #include "ScienceSphynx.h"
+#include "getNPC.h"
 
 // testing getNPC to see if the expected output gives randomised monsters each time 
 
 int main() {
+
+    QuestionBank::fillGeographyQuestions();
+    QuestionBank::fillScienceQuestions();
+    QuestionBank::fillElfQuestions();
+    QuestionBank::fillNames();
+
     Npc* npc = getNPC(); 
 
     if (npc != nullptr) {
-        string npcType;
+        string npcType; 
 
         if (dynamic_cast<Elf*>(npc) != nullptr) {
             npcType = "Elf";
@@ -26,8 +32,8 @@ int main() {
         } else if (dynamic_cast<GeographyGiant*>(npc) != nullptr) {
             npcType = "GeographyGiant";
         } else {
-            npcType = "Unknown";
-        }
+            npcType = "Unknown"; 
+        }   
 
         cout << "Created NPC of type: " << npcType << endl;
         delete npc;
