@@ -7,7 +7,6 @@ using namespace std;
 
 class Player
 {
-    string name;
     int score = 0;
     int health = 100; // starting health
 
@@ -32,16 +31,6 @@ public:
     void recieveDamage(int damage)
     {
         health -= damage;
-    }
-
-    string_view getName()
-    {
-        return name;
-    }
-
-    void setName(string n)
-    {
-        name = n;
     }
 
     friend bool loadSavedGame(Player& player);

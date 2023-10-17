@@ -18,7 +18,7 @@ int main() {
     QuestionBank::fillElfQuestions();
     QuestionBank::fillNames();
 
-    Npc* npc = getNPC(); 
+    Npc* npc = getNPC();
 
     if (npc != nullptr) {
         string npcType; 
@@ -33,7 +33,7 @@ int main() {
             npcType = "GeographyGiant";
         } else {
             npcType = "Unknown"; 
-        }   
+        }
 
         cout << "Created NPC of type: " << npcType << endl;
         delete npc;

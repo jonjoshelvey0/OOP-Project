@@ -1,4 +1,3 @@
-
 #include "NPC.h"
 #include "playGame.h"
 #include "Monster.h"
@@ -10,6 +9,8 @@
 #include "Random.h"
 
 using namespace std;
+
+// testing the output of the maths minotaur, specifically the division questions however can be changed to test all questions
 
 int main()
 {

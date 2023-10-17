@@ -3,7 +3,7 @@ game: main.cpp
 	@./Quest4Knowledge
 
 clear:
-	rm -f Quest4Knowledge test1 test2 test3 test4 test5 test6
+	rm -f Quest4Knowledge test1 test2 test3 test4 test5 test6 test7
 
 test1: test1.cpp
 	g++ -Wall -Wextra -g3 -std=c++20 test1.cpp -o test1
@@ -28,3 +28,7 @@ test5: test5.cpp
 test6: test6.cpp 
 	g++ -Wall -Wextra -g3 -std=c++20 test6.cpp -o test6
 	./test6
+
+test7: test7.cpp 
+	g++ -Wall -Wextra -g3 -std=c++20 test7.cpp -o test7
+	./test7

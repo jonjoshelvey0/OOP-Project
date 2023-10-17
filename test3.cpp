@@ -10,6 +10,8 @@
 
 using namespace std;
 
+// testing the output of the geography giant, specifically the questions and answers from the text file
+
 int main(){
     QuestionBank::fillGeographyQuestions();
     QuestionBank::fillScienceQuestions();

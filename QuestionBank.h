@@ -124,14 +124,6 @@ namespace QuestionBank
             getline(myFile, question);
         }
 
-        // for (auto& i : elfQuestions)
-        // {
-        //     for (auto& j : i)
-        //     {
-        //         cout << j << "\n";
-        //     }
-        // }
-
         myFile.close();
     }
 }
